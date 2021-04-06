@@ -2,7 +2,7 @@
 
 Este projeto foi feito para entender sobre o matDatapicker
 
-Sobre o modo que é tratado o fuso horário em anguns casos o a data aparece com -1 dia
+Sobre o modo que é tratado o fuso horário em alguns casos quando a data aparece com -1 dia
 
 Isso acontece por falta de algumas contigurações no providers
  
