@@ -1,3 +1,27 @@
+# Sobre
+
+Este projeto foi feito para entender sobre o matDatapicker
+
+Sobre o modo que é tratado o fuso horário em anguns casos o a data aparece com -1 dia
+
+Isso acontece por falta de algumas contigurações no providers
+ 
+ Então só é preciso acrescentar o que falta: no exemplo abaixo esta como estava o meu projeto antes, enquanto estava dando o erro: 
+ providers: [
+    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
+    ]
+
+Este exemplo é de como ficou depois de acrescentar algumas coisas, e apareceu a hora correta:
+
+ providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'ru-RU' },
+    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
+    { provide: DateAdapter, useClass: MomentDateAdapter },
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } }
+    ]
+
+
+
 # MatDateP
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
